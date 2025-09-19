@@ -3,7 +3,8 @@ using UnityEngine;
 public class Player_JumpState : Player_AiredState
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float delayTime = 0.15f;
+    public float delayTimeToSlideState = 0.15f;
+    public float timer;
     public Player_JumpState(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)
     {
     }
@@ -11,13 +12,13 @@ public class Player_JumpState : Player_AiredState
     {
         base.Enter();
         player.SetVelocity(rb.linearVelocity.x, player.jumpForce);
-        player.timer = delayTime;
+        timer = delayTimeToSlideState;
 
     }
     public override void Update()
     {
         base.Update();
-        player.timer -= Time.deltaTime;
+        timer -= Time.deltaTime;
         player.currentStateName = "Jump";
         if (rb.linearVelocity.y < 0f)
         {
@@ -25,10 +26,10 @@ public class Player_JumpState : Player_AiredState
         }
         if (player.wallDetected)
         {
-            if (player.timer < 0)
+            if (timer < 0)
             {
                 stateMachine.ChangeState(player.wallSlideState);
-                player.timer = 0.2f;
+                timer = delayTimeToSlideState;
             }
         }
 

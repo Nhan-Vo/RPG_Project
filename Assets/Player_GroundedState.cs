@@ -25,6 +25,10 @@ public class Player_GroundedState : EntityState //Whenever idle and move need to
         {
             stateMachine.ChangeState(player.jumpState);
         }
+        if (input.Player.Attack.WasPerformedThisFrame())
+        {
+            stateMachine.ChangeState(player.basicAttackState);
+        }
     }
 }
 
