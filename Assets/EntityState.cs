@@ -11,6 +11,7 @@ public abstract class EntityState //This class is only a blueprint
     protected PlayerInputSet input;
 
     protected float stateTimer;
+    protected bool triggerCalled;
 
     public EntityState(Player player,StateMachine stateMachine, string stateName)
     {
@@ -27,6 +28,7 @@ public abstract class EntityState //This class is only a blueprint
     {
         // Everytime state will be changed, Enter() is called
         anim.SetBool(animBoolName, true);
+        triggerCalled = false;
     }
 
     public virtual void Update()
@@ -43,6 +45,11 @@ public abstract class EntityState //This class is only a blueprint
     {
         // Everytime we exit from a state and change to a new one, Exit() is called
         anim.SetBool(animBoolName, false);
+    }
+
+    public void CallAnimationTrigger()
+    {
+        triggerCalled = true;
     }
     private bool CanDash()
     {

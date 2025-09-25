@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 1073960556}
   - component: {fileID: 1073960558}
   - component: {fileID: 1073960557}
+  - component: {fileID: 1073960559}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -718,6 +719,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1073960559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073960555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc21b3a11fd3cb14885695d0240758e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1218931697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a1a89ea6a9c144a2c878e190162f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackVelocity: {x: 3, y: 1}
+  attackVelocityDuration: 0.1
   currentStateName: 
   moveSpeed: 8
   jumpForce: 12
@@ -1075,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 1695188828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.29, y: 0.73, z: 0.020564094}
+  m_LocalPosition: {x: -5.25, y: 1.16, z: 0.020564094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
