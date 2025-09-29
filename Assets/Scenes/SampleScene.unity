@@ -1066,8 +1066,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a1a89ea6a9c144a2c878e190162f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackVelocity: {x: 3, y: 1}
+  attackVelocity:
+  - {x: 3, y: 1.5}
+  - {x: 1, y: 2.5}
+  - {x: 2.75, y: 1.75}
   attackVelocityDuration: 0.1
+  comboResetTime: 1
   currentStateName: 
   moveSpeed: 8
   jumpForce: 12
