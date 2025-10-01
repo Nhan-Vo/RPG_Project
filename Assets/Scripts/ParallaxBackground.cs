@@ -16,7 +16,7 @@ public class ParallaxBackground : MonoBehaviour
         CalculateImageLength();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         float currentCameraPositionX = mainCamera.transform.position.x;  
         float distanceToMove = currentCameraPositionX - lastMainCameraPositionX;
