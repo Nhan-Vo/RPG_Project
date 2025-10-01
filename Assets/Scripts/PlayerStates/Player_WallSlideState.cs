@@ -27,6 +27,11 @@ public class Player_WallSlideState : EntityState
         {
             stateMachine.ChangeState(player.idleState);
             player.Flip();
+
+            //if (player.facingDir != player.moveInput.x)
+            //{
+            //    player.Flip();
+            //}
         }
     }
     private void HandleWallSlide()
