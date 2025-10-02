@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player_WallJumpState : EntityState
+public class Player_WallJumpState : PlayerState
 {
     private float moveLockTimer;
     private const float moveLockDuration = 0.1f;

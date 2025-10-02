@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player_GroundedState : EntityState //Whenever idle and move need to share some logic, ground sate is a super state to hold those logic
+public class Player_GroundedState : PlayerState //Whenever idle and move need to share some logic, ground sate is a super state to hold those logic
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Player_GroundedState(Player player, StateMachine stateMachine, string stateName) : base(player, stateMachine, stateName)

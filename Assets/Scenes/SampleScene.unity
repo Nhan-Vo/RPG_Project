@@ -9157,7 +9157,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.983393, y: -3.9263353, z: -1.692893}
+  m_LocalPosition: {x: -3.961696, y: -3.9263453, z: -1.692893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9814,6 +9814,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48a1a89ea6a9c144a2c878e190162f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckDistance: 1.37
+  wallCheckDistance: 0.4
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  primaryWallCheck: {fileID: 274692417}
+  secondaryWallCheck: {fileID: 1672177759}
   attackVelocity:
   - {x: 3, y: 1.5}
   - {x: 1, y: 2.5}
@@ -9829,13 +9836,6 @@ MonoBehaviour:
   inAirMoveMultiplier: 0.661
   dashDuration: 0.25
   dashSpeed: 20
-  groundCheckDistance: 1.37
-  wallCheckDistance: 0.4
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  primaryWallCheck: {fileID: 274692417}
-  secondaryWallCheck: {fileID: 1672177759}
 --- !u!4 &1695188830
 Transform:
   m_ObjectHideFlags: 0
