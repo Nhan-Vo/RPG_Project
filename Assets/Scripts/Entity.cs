@@ -30,13 +30,11 @@ public class Entity : MonoBehaviour
 
         stateMachine = new StateMachine();
     }
-
     
     protected virtual void Start()
     {
 
     }
- 
 
     private void Update()
     {
