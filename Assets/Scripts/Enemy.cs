@@ -23,7 +23,7 @@ public class Enemy : Entity
         base.OnDrawGizmos();
 
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(playerCheck.position, playerCheck.position + new Vector3(playerCheckDistance * facingDir, 0, 0));
+        Gizmos.DrawLine(playerCheck.position, new Vector3(playerCheck.position.x + (facingDir * playerCheckDistance), playerCheck.position.y));
 
     }   
 }
